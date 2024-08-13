@@ -146,6 +146,7 @@
             btnMusteriEkle.TabIndex = 36;
             btnMusteriEkle.Text = "Müşteri Ekle";
             btnMusteriEkle.UseVisualStyleBackColor = false;
+            btnMusteriEkle.Click += btnMusteriEkle_Click;
             // 
             // dateTimePickerCikis
             // 

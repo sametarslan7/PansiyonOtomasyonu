@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
+
 
 namespace PansiyonUygulamasi
 {
@@ -16,6 +19,7 @@ namespace PansiyonUygulamasi
         {
             InitializeComponent();
         }
+        SqlConnection baglanti = new SqlConnection("Data Source=DESTROYERM\\SQLEXPRESS;Initial Catalog=DB_PANSIYON;Integrated Security=True");
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -114,6 +118,7 @@ namespace PansiyonUygulamasi
 
         }
 
+        //ana sayaaya dönme butonu
         private void button1_Click(object sender, EventArgs e)
         {
             FrmAnaForm fr = new FrmAnaForm();
@@ -121,9 +126,27 @@ namespace PansiyonUygulamasi
             this.Close();
         }
 
+        //uygulamadan çıkma butonu
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        //müşteri ekleme butonu
+        private void btnMusteriEkle_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("insert into TBLMUSTERI values(@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9)",baglanti);
+            komut.Parameters.AddWithValue("@p1", txtAd.Text);
+            komut.Parameters.AddWithValue("@p2", txtSoyad.Text);
+            komut.Parameters.AddWithValue("@p3", maskedTelefon.Text);
+            komut.Parameters.AddWithValue("@p4", txtMail.Text);
+            komut.Parameters.AddWithValue("@p5", maskedTCKimlik.Text);
+            komut.Parameters.AddWithValue("@p6", txtOdaNo.Text);
+            komut.Parameters.AddWithValue("@p7", Convert.ToDateTime(dateTimePickerGiris.Text));
+            komut.Parameters.AddWithValue("@p8", Convert.ToDateTime(dateTimePickerCikis.Text));
+            komut.Parameters.AddWithValue("@p9", txtUcret.Text);
+            komut.ExecuteNonQuery();
         }
     }
 }

@@ -19,3 +19,11 @@ C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\obj\Debug\net7.0-win
 C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\obj\Debug\net7.0-windows\PansiyonUygulamasi.FrmAnaForm.resources
 C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\obj\Debug\net7.0-windows\PansiyonUygulamasi.FrmOdaDetay.resources
 C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\obj\Debug\net7.0-windows\PansiyonUygulamasi.FrmOdalar.resources
+C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\bin\Debug\net7.0-windows\System.Data.SqlClient.dll
+C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\bin\Debug\net7.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\bin\Debug\net7.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\bin\Debug\net7.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\bin\Debug\net7.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\obj\Debug\net7.0-windows\PansiyonUygulamasi.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\obj\Debug\net7.0-windows\PansiyonUygulamasi.csproj.CopyComplete
