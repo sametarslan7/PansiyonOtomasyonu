@@ -11,5 +11,17 @@ namespace PansiyonUygulamasi
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmAnaForm fr = new FrmAnaForm();
+            fr.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

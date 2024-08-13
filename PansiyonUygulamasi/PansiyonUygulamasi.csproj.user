@@ -7,6 +7,12 @@
     <Compile Update="FrmAnaForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmOdaDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmOdalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmYeniMusteri.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmYeniMusteri));
             groupBox1 = new GroupBox();
+            lblGunSayisi = new Label();
             txtUcret = new TextBox();
             label9 = new Label();
             btnMusteriEkle = new Button();
@@ -66,12 +68,15 @@
             btnOda103 = new Button();
             btnOda102 = new Button();
             btnOda101 = new Button();
+            button1 = new Button();
+            button2 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(lblGunSayisi);
             groupBox1.Controls.Add(txtUcret);
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(btnMusteriEkle);
@@ -100,14 +105,26 @@
             groupBox1.Text = "Müşteri  Bilgiler";
             groupBox1.Enter += groupBox1_Enter;
             // 
+            // lblGunSayisi
+            // 
+            lblGunSayisi.AutoSize = true;
+            lblGunSayisi.Location = new Point(428, 382);
+            lblGunSayisi.Name = "lblGunSayisi";
+            lblGunSayisi.Size = new Size(56, 20);
+            lblGunSayisi.TabIndex = 39;
+            lblGunSayisi.Text = "label10";
+            lblGunSayisi.Visible = false;
+            // 
             // txtUcret
             // 
             txtUcret.BackColor = Color.BlanchedAlmond;
+            txtUcret.Enabled = false;
             txtUcret.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtUcret.Location = new Point(199, 327);
             txtUcret.Name = "txtUcret";
             txtUcret.Size = new Size(278, 25);
             txtUcret.TabIndex = 38;
+            txtUcret.TextChanged += txtUcret_TextChanged;
             // 
             // label9
             // 
@@ -137,6 +154,7 @@
             dateTimePickerCikis.Name = "dateTimePickerCikis";
             dateTimePickerCikis.Size = new Size(200, 27);
             dateTimePickerCikis.TabIndex = 35;
+            dateTimePickerCikis.ValueChanged += dateTimePickerCikis_ValueChanged;
             // 
             // dateTimePickerGiris
             // 
@@ -306,7 +324,7 @@
             groupBox2.Font = new Font("Microsoft YaHei", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox2.Location = new Point(543, 12);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(430, 452);
+            groupBox2.Size = new Size(382, 452);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Odalar";
@@ -515,13 +533,39 @@
             btnOda101.UseVisualStyleBackColor = false;
             btnOda101.Click += btnOda101_Click;
             // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.HighlightText;
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.Location = new Point(944, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(33, 33);
+            button1.TabIndex = 2;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.HighlightText;
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2.Location = new Point(993, 12);
+            button2.Name = "button2";
+            button2.Size = new Size(33, 33);
+            button2.TabIndex = 3;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
             // FrmYeniMusteri
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(1052, 476);
+            ClientSize = new Size(1036, 476);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             MaximizeBox = false;
@@ -574,5 +618,8 @@
         private Button button18;
         private TextBox txtUcret;
         private Label label9;
+        private Label lblGunSayisi;
+        private Button button1;
+        private Button button2;
     }
 }

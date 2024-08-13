@@ -39,6 +39,7 @@
             button4 = new Button();
             button5 = new Button();
             button6 = new Button();
+            label5 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -70,6 +71,7 @@
             button1.Size = new Size(92, 99);
             button1.TabIndex = 2;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -80,6 +82,7 @@
             button2.Size = new Size(92, 99);
             button2.TabIndex = 3;
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label3
             // 
@@ -108,6 +111,7 @@
             button3.Size = new Size(92, 99);
             button3.TabIndex = 6;
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -139,12 +143,22 @@
             button6.TabIndex = 9;
             button6.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(415, 299);
+            label5.Name = "label5";
+            label5.Size = new Size(55, 20);
+            label5.TabIndex = 10;
+            label5.Text = "Odalar";
+            // 
             // FrmAnaForm
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Teal;
             ClientSize = new Size(1009, 466);
+            Controls.Add(label5);
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
@@ -156,7 +170,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "FrmAnaForm";
             Text = "Ana Sayfa";
             ResumeLayout(false);
@@ -175,5 +189,6 @@
         private Button button4;
         private Button button5;
         private Button button6;
+        private Label label5;
     }
 }

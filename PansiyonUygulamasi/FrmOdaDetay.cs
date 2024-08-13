@@ -10,32 +10,30 @@ using System.Windows.Forms;
 
 namespace PansiyonUygulamasi
 {
-    public partial class FrmAnaForm : Form
+    public partial class FrmOdaDetay : Form
     {
-        public FrmAnaForm()
+        public FrmOdaDetay()
         {
             InitializeComponent();
         }
 
+        private void FrmOdaDetay_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmAdminGiris fr = new FrmAdminGiris();
+            FrmAnaForm fr = new FrmAnaForm();
             fr.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FrmYeniMusteri fr = new FrmYeniMusteri();
-            fr.Show();
-            this.Hide();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
             FrmOdalar fr=new FrmOdalar();
             fr.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

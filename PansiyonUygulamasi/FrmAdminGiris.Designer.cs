@@ -36,6 +36,8 @@
             btnGirisYap = new Button();
             pictureBox1 = new PictureBox();
             label3 = new Label();
+            button2 = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -108,13 +110,39 @@
             label3.Text = "Pansiyon Kayıt Sistemi'ne Hoşgeldiniz";
             label3.Click += label3_Click;
             // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.HighlightText;
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2.Location = new Point(79, 12);
+            button2.Name = "button2";
+            button2.Size = new Size(43, 37);
+            button2.TabIndex = 8;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.HighlightText;
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.Location = new Point(30, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(43, 37);
+            button1.TabIndex = 7;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // FrmAdminGiris
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(729, 450);
+            ClientSize = new Size(722, 450);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(pictureBox1);
             Controls.Add(btnGirisYap);
@@ -140,5 +168,7 @@
         private Button btnGirisYap;
         private PictureBox pictureBox1;
         private Label label3;
+        private Button button2;
+        private Button button1;
     }
 }

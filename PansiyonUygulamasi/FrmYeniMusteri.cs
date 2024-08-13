@@ -96,5 +96,34 @@ namespace PansiyonUygulamasi
         {
             txtOdaNo.Text = "115";
         }
+
+        private void dateTimePickerCikis_ValueChanged(object sender, EventArgs e)
+        {
+            int ucret;
+            DateTime giristarih = Convert.ToDateTime(dateTimePickerGiris.Text);
+            DateTime cikistarih = Convert.ToDateTime(dateTimePickerCikis.Text);
+
+            TimeSpan fark = cikistarih - giristarih;
+
+
+            txtUcret.Text = (Convert.ToInt32(fark.TotalDays.ToString()) * 1000).ToString() + " TL";
+        }
+
+        private void txtUcret_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmAnaForm fr = new FrmAnaForm();
+            fr.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
