@@ -162,6 +162,7 @@
             btnGuncelle.TabIndex = 37;
             btnGuncelle.Text = "Güncelle";
             btnGuncelle.UseVisualStyleBackColor = true;
+            btnGuncelle.Click += btnGuncelle_Click;
             // 
             // btnAra
             // 
@@ -381,6 +382,7 @@
             // txtID
             // 
             txtID.BackColor = Color.BlanchedAlmond;
+            txtID.Enabled = false;
             txtID.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtID.Location = new Point(136, 30);
             txtID.Name = "txtID";

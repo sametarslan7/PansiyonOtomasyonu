@@ -22,6 +22,7 @@ namespace PansiyonUygulamasi
         SqlConnection baglanti = new SqlConnection("Data Source=DESTROYERM\\SQLEXPRESS;Initial Catalog=DB_PANSIYON;Integrated Security=True");
         private void verilerigoster()
         {
+            listView1.Items.Clear();
             baglanti.Open();
             SqlCommand komut = new SqlCommand("select * from TBLMUSTERI", baglanti);
             SqlDataReader oku = komut.ExecuteReader();
@@ -95,9 +96,27 @@ namespace PansiyonUygulamasi
         {
             baglanti.Open();
             SqlCommand komut2 = new SqlCommand("delete from TBLMUSTERI where MUSTERIID=@p1", baglanti);
-            komut2.Parameters.AddWithValue("@p1",txtID.Text);
+            komut2.Parameters.AddWithValue("@p1", txtID.Text);
             komut2.ExecuteNonQuery();
             baglanti.Close();
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut3 = new SqlCommand("update TBLMUSTERI set MUSTERIAD=@p1,MUSTERISOYAD=@p2,MUSTERITELEFON=@p3,MUSTERIMAIL=@p4,MUSTERITC=@p5,ODANO=@p6,GIRISTARIHI=@p7,CIKISTARIHI=@p8,UCRET=@p9", baglanti);
+            komut3.Parameters.AddWithValue("@p1",txtAd.Text);
+            komut3.Parameters.AddWithValue("@p2", txtSoyad.Text);
+            komut3.Parameters.AddWithValue("@p3", maskedTelefon.Text);
+            komut3.Parameters.AddWithValue("@p4", txtMail.Text);
+            komut3.Parameters.AddWithValue("@p5", maskedTCKimlik.Text);
+            komut3.Parameters.AddWithValue("@p6", txtOdaNo.Text);
+            komut3.Parameters.AddWithValue("@p7", Convert.ToDateTime(dateTimePickerGiris.Text));
+            komut3.Parameters.AddWithValue("@p8", Convert.ToDateTime(dateTimePickerCikis.Text));
+            komut3.Parameters.AddWithValue("@p9", txtUcret.Text);
+            komut3.ExecuteNonQuery();
+            baglanti.Close();
+            verilerigoster();
         }
     }
 }
