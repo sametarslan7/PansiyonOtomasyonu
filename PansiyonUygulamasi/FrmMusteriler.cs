@@ -68,5 +68,36 @@ namespace PansiyonUygulamasi
         {
             Application.Exit();
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        int id = 0;
+
+        private void listView1_DoubleClick(object sender, EventArgs e)
+        {
+            id = int.Parse(listView1.SelectedItems[0].SubItems[0].Text);
+            txtID.Text = listView1.SelectedItems[0].SubItems[0].Text;
+            txtAd.Text = listView1.SelectedItems[0].SubItems[1].Text;
+            txtSoyad.Text = listView1.SelectedItems[0].SubItems[2].Text;
+            maskedTelefon.Text = listView1.SelectedItems[0].SubItems[3].Text;
+            txtMail.Text = listView1.SelectedItems[0].SubItems[4].Text;
+            maskedTCKimlik.Text = listView1.SelectedItems[0].SubItems[5].Text;
+            txtOdaNo.Text = listView1.SelectedItems[0].SubItems[6].Text;
+            dateTimePickerGiris.Text = listView1.SelectedItems[0].SubItems[7].Text;
+            dateTimePickerCikis.Text = listView1.SelectedItems[0].SubItems[8].Text;
+            txtUcret.Text = listView1.SelectedItems[0].SubItems[9].Text;
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut2 = new SqlCommand("delete from TBLMUSTERI where MUSTERIID=@p1", baglanti);
+            komut2.Parameters.AddWithValue("@p1",txtID.Text);
+            komut2.ExecuteNonQuery();
+            baglanti.Close();
+        }
     }
 }
