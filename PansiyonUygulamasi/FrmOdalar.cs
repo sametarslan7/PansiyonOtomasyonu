@@ -31,211 +31,107 @@ namespace PansiyonUygulamasi
 
         private void btnOda101_Click(object sender, EventArgs e)
         {
-            if (btnOda101.Enabled == true)
-            {
-                FrmOdaDetay fr = new FrmOdaDetay();
-                fr.Show();
-                this.Close();
-            } else
-            {
-                MessageBox.Show("Bu oda detayına ulaşılamaz");
-            }
+            FrmOdaDetay fr = new FrmOdaDetay(btnOda101);
+            fr.Show();
+            this.Close();
         }
 
         private void btnOda102_Click(object sender, EventArgs e)
         {
-            if (btnOda101.Enabled == true)
-            {
-                FrmOdaDetay fr = new FrmOdaDetay();
-                fr.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Bu oda detayına ulaşılamaz");
-            }
+            FrmOdaDetay fr = new FrmOdaDetay(btnOda102);
+            fr.Show();
+            this.Close();
         }
 
         private void btnOda103_Click(object sender, EventArgs e)
         {
-            if (btnOda101.Enabled == true)
-            {
-                FrmOdaDetay fr = new FrmOdaDetay();
-                fr.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Bu oda detayına ulaşılamaz");
-            }
+            FrmOdaDetay fr = new FrmOdaDetay(btnOda103);
+            fr.Show();
+            this.Close();
         }
 
         private void btnOda104_Click(object sender, EventArgs e)
         {
-            if (btnOda101.Enabled == true)
-            {
-                FrmOdaDetay fr = new FrmOdaDetay();
-                fr.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Bu oda detayına ulaşılamaz");
-            }
+            FrmOdaDetay fr = new FrmOdaDetay(btnOda104);
+            fr.Show();
+            this.Close();
         }
 
         private void btnOda105_Click(object sender, EventArgs e)
         {
-            if (btnOda101.Enabled == true)
-            {
-                FrmOdaDetay fr = new FrmOdaDetay();
-                fr.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Bu oda detayına ulaşılamaz");
-            }
+            FrmOdaDetay fr = new FrmOdaDetay(btnOda105);
+            fr.Show();
+            this.Close();
         }
 
         private void btnOda106_Click(object sender, EventArgs e)
         {
-            if (btnOda101.Enabled == true)
-            {
-                FrmOdaDetay fr = new FrmOdaDetay();
-                fr.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Bu oda detayına ulaşılamaz");
-            }
+            FrmOdaDetay fr = new FrmOdaDetay(btnOda106);
+            fr.Show();
+            this.Close();
         }
 
         private void btnOda107_Click(object sender, EventArgs e)
         {
-            if (btnOda101.Enabled == true)
-            {
-                FrmOdaDetay fr = new FrmOdaDetay();
-                fr.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Bu oda detayına ulaşılamaz");
-            }
+            FrmOdaDetay fr = new FrmOdaDetay(btnOda107);
+            fr.Show();
+            this.Close();
         }
 
         private void btnOda108_Click(object sender, EventArgs e)
         {
-            if (btnOda101.Enabled == true)
-            {
-                FrmOdaDetay fr = new FrmOdaDetay();
-                fr.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Bu oda detayına ulaşılamaz");
-            }
+            FrmOdaDetay fr = new FrmOdaDetay(btnOda108);
+            fr.Show();
+            this.Close();
         }
 
         private void btnOda109_Click(object sender, EventArgs e)
         {
-            if (btnOda101.Enabled == true)
-            {
-                FrmOdaDetay fr = new FrmOdaDetay();
-                fr.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Bu oda detayına ulaşılamaz");
-            }
+            FrmOdaDetay fr = new FrmOdaDetay(btnOda109);
+            fr.Show();
+            this.Close();
         }
 
         private void btnOda110_Click(object sender, EventArgs e)
         {
-            if (btnOda101.Enabled == true)
-            {
-                FrmOdaDetay fr = new FrmOdaDetay();
-                fr.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Bu oda detayına ulaşılamaz");
-            }
+            FrmOdaDetay fr = new FrmOdaDetay(btnOda110);
+            fr.Show();
+            this.Close();
         }
 
         private void btnOda111_Click(object sender, EventArgs e)
         {
-            if (btnOda101.Enabled == true)
-            {
-                FrmOdaDetay fr = new FrmOdaDetay();
-                fr.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Bu oda detayına ulaşılamaz");
-            }
+            FrmOdaDetay fr = new FrmOdaDetay(btnOda111);
+            fr.Show();
+            this.Close();
         }
 
         private void btnOda112_Click(object sender, EventArgs e)
         {
-            if (btnOda101.Enabled == true)
-            {
-                FrmOdaDetay fr = new FrmOdaDetay();
-                fr.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Bu oda detayına ulaşılamaz");
-            }
+            FrmOdaDetay fr = new FrmOdaDetay(btnOda112);
+            fr.Show();
+            this.Close();
         }
 
         private void btnOda113_Click(object sender, EventArgs e)
         {
-            if (btnOda101.Enabled == true)
-            {
-                FrmOdaDetay fr = new FrmOdaDetay();
-                fr.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Bu oda detayına ulaşılamaz");
-            }
+            FrmOdaDetay fr = new FrmOdaDetay(btnOda113);
+            fr.Show();
+            this.Close();
         }
 
         private void btnOda114_Click(object sender, EventArgs e)
         {
-            if (btnOda101.Enabled == true)
-            {
-                FrmOdaDetay fr = new FrmOdaDetay();
-                fr.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Bu oda detayına ulaşılamaz");
-            }
+            FrmOdaDetay fr = new FrmOdaDetay(btnOda114);
+            fr.Show();
+            this.Close();
         }
 
         private void btnOda115_Click(object sender, EventArgs e)
         {
-            if (btnOda101.Enabled == true)
-            {
-                FrmOdaDetay fr = new FrmOdaDetay();
-                fr.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Bu oda detayına ulaşılamaz");
-            }
+            FrmOdaDetay fr = new FrmOdaDetay(btnOda115);
+            fr.Show();
+            this.Close();
         }
     }
 }

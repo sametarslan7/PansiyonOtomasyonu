@@ -45,17 +45,20 @@
             lblCikisTarih = new Label();
             button2 = new Button();
             button1 = new Button();
+            label4 = new Label();
+            lblUcret = new Label();
             SuspendLayout();
             // 
             // lblOdaNo
             // 
             lblOdaNo.AutoSize = true;
             lblOdaNo.Font = new Font("Bookman Old Style", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblOdaNo.Location = new Point(88, 74);
+            lblOdaNo.Location = new Point(123, 74);
             lblOdaNo.Name = "lblOdaNo";
             lblOdaNo.Size = new Size(83, 19);
             lblOdaNo.TabIndex = 0;
             lblOdaNo.Text = "lblOdaNo";
+            lblOdaNo.Click += lblOdaNo_Click;
             // 
             // label2
             // 
@@ -199,12 +202,33 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(64, 376);
+            label4.Name = "label4";
+            label4.Size = new Size(62, 21);
+            label4.TabIndex = 35;
+            label4.Text = "Ücret : ";
+            label4.Click += label4_Click;
+            // 
+            // lblUcret
+            // 
+            lblUcret.AutoSize = true;
+            lblUcret.Location = new Point(198, 376);
+            lblUcret.Name = "lblUcret";
+            lblUcret.Size = new Size(68, 21);
+            lblUcret.TabIndex = 34;
+            lblUcret.Text = "lblUcret";
+            // 
             // FrmOdaDetay
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SkyBlue;
-            ClientSize = new Size(448, 419);
+            ClientSize = new Size(448, 432);
+            Controls.Add(label4);
+            Controls.Add(lblUcret);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label11);
@@ -248,5 +272,7 @@
         private Label lblCikisTarih;
         private Button button2;
         private Button button1;
+        private Label label4;
+        private Label lblUcret;
     }
 }

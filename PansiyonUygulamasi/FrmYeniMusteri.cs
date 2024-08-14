@@ -148,6 +148,7 @@ namespace PansiyonUygulamasi
             komut.Parameters.AddWithValue("@p9", txtUcret.Text);
             komut.ExecuteNonQuery();
             MessageBox.Show("Müşteri Kaydı Başarıyla Yapıldı.");
+            
         }
     }
 }
