@@ -56,12 +56,14 @@ namespace PansiyonUygulamasi
                     if (customerCount == 0 || customerCount < 0)
                     {
                         btn.Enabled = false;
-                        btn.BackColor = Color.Red;
+                        btn.BackColor = Color.Green;
+                        btn.Text += " - Boş ";
                     }
                     else
                     {
                         btn.Enabled = true;
-                        btn.BackColor = Color.Green;
+                        btn.BackColor = Color.Red;
+                        //btn.Text += " - Dolu "; 
                     }
                 }
             }

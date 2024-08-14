@@ -136,7 +136,7 @@ namespace PansiyonUygulamasi
         private void btnMusteriEkle_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("insert into TBLMUSTERI values(@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9)",baglanti);
+            SqlCommand komut = new SqlCommand("insert into TBLMUSTERI values(@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9)", baglanti);
             komut.Parameters.AddWithValue("@p1", txtAd.Text);
             komut.Parameters.AddWithValue("@p2", txtSoyad.Text);
             komut.Parameters.AddWithValue("@p3", maskedTelefon.Text);
@@ -148,7 +148,52 @@ namespace PansiyonUygulamasi
             komut.Parameters.AddWithValue("@p9", txtUcret.Text);
             komut.ExecuteNonQuery();
             MessageBox.Show("Müşteri Kaydı Başarıyla Yapıldı.");
-            
+
+        }
+
+        public void OdaDoluluk()
+        {
+            // Veritabanı bağlantısını aç
+            baglanti.Open();
+
+            // Butonların tümünü kontrol et
+            foreach (Control control in groupBox2.Controls)
+            {
+                if (control is Button)
+                {
+                    Button btn = (Button)control;
+                    string odaNo = new string(btn.Text.Where(char.IsDigit).ToArray());
+
+                    // SQL komutunu oluştur
+                    SqlCommand komut2 = new SqlCommand("SELECT COUNT(*) FROM TBLMUSTERI WHERE ODANO = @p1", baglanti);
+                    komut2.Parameters.AddWithValue("@p1", odaNo);
+
+                    // Sorguyu çalıştır ve müşteri sayısını kontrol et
+                    int customerCount = (int)komut2.ExecuteScalar();
+
+                    // Eğer müşteri yoksa butonu devre dışı bırak
+                    if (customerCount == 0 || customerCount < 0)
+                    {
+                        btn.Enabled = true;
+                        btn.BackColor = Color.Green;
+                        //btn.Text += " - Boş ";
+                    }
+                    else
+                    {
+                        btn.Enabled = false;
+                        btn.BackColor = Color.Red;
+                        //btn.Text += " - Dolu "; 
+                    }
+                }
+            }
+
+            // Bağlantıyı kapat
+            baglanti.Close();
+        }
+
+        private void FrmYeniMusteri_Load(object sender, EventArgs e)
+        {
+            OdaDoluluk();
         }
     }
 }

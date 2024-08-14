@@ -104,7 +104,9 @@ namespace PansiyonUygulamasi
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut3 = new SqlCommand("update TBLMUSTERI set MUSTERIAD=@p1,MUSTERISOYAD=@p2,MUSTERITELEFON=@p3,MUSTERIMAIL=@p4,MUSTERITC=@p5,ODANO=@p6,GIRISTARIHI=@p7,CIKISTARIHI=@p8,UCRET=@p9", baglanti);
+            SqlCommand komut3 = new SqlCommand("update TBLMUSTERI set MUSTERIAD=@p1,MUSTERISOYAD=@p2,MUSTERITELEFON=@p3,MUSTERIMAIL=@p4,MUSTERITC=@p5,ODANO=@p6,GIRISTARIHI=@p7,CIKISTARIHI=@p8,UCRET=@p9 where MUSTERIID=@pid", baglanti);
+
+            komut3.Parameters.AddWithValue("@pid",txtID.Text.ToString());
             komut3.Parameters.AddWithValue("@p1", txtAd.Text);
             komut3.Parameters.AddWithValue("@p2", txtSoyad.Text);
             komut3.Parameters.AddWithValue("@p3", maskedTelefon.Text);

@@ -47,7 +47,11 @@
             btnOda102 = new Button();
             btnOda101 = new Button();
             panel1 = new Panel();
+            button17 = new Button();
+            button18 = new Button();
+            panel2 = new Panel();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // button2
@@ -263,12 +267,46 @@
             panel1.Size = new Size(130, 41);
             panel1.TabIndex = 61;
             // 
+            // button17
+            // 
+            button17.BackColor = Color.LimeGreen;
+            button17.Enabled = false;
+            button17.Font = new Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button17.Location = new Point(56, 43);
+            button17.Name = "button17";
+            button17.Size = new Size(59, 31);
+            button17.TabIndex = 63;
+            button17.Text = "Boş";
+            button17.UseVisualStyleBackColor = false;
+            // 
+            // button18
+            // 
+            button18.BackColor = Color.OrangeRed;
+            button18.Enabled = false;
+            button18.Font = new Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button18.Location = new Point(56, 6);
+            button18.Name = "button18";
+            button18.Size = new Size(59, 31);
+            button18.TabIndex = 62;
+            button18.Text = "Dolu";
+            button18.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(button18);
+            panel2.Controls.Add(button17);
+            panel2.Location = new Point(384, 571);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(130, 77);
+            panel2.TabIndex = 64;
+            // 
             // FrmOdalar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SkyBlue;
-            ClientSize = new Size(571, 589);
+            ClientSize = new Size(568, 668);
+            Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(btnOda115);
             Controls.Add(btnOda114);
@@ -289,6 +327,7 @@
             Text = "Odalar";
             Load += FrmOdalar_Load;
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -311,5 +350,8 @@
         private Button btnOda102;
         private Button btnOda101;
         private Panel panel1;
+        private Button button17;
+        private Button button18;
+        private Panel panel2;
     }
 }

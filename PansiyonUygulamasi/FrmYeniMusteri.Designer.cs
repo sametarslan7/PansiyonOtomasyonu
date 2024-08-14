@@ -51,8 +51,6 @@
             label2 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
-            button17 = new Button();
-            button18 = new Button();
             btnOda115 = new Button();
             btnOda114 = new Button();
             btnOda113 = new Button();
@@ -70,6 +68,8 @@
             btnOda101 = new Button();
             button1 = new Button();
             button2 = new Button();
+            button17 = new Button();
+            button18 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -305,8 +305,6 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(button17);
-            groupBox2.Controls.Add(button18);
             groupBox2.Controls.Add(btnOda115);
             groupBox2.Controls.Add(btnOda114);
             groupBox2.Controls.Add(btnOda113);
@@ -325,34 +323,10 @@
             groupBox2.Font = new Font("Microsoft YaHei", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox2.Location = new Point(543, 12);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(382, 452);
+            groupBox2.Size = new Size(382, 362);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Odalar";
-            // 
-            // button17
-            // 
-            button17.BackColor = Color.LimeGreen;
-            button17.Enabled = false;
-            button17.Font = new Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button17.Location = new Point(286, 410);
-            button17.Name = "button17";
-            button17.Size = new Size(59, 31);
-            button17.TabIndex = 16;
-            button17.Text = "Boş";
-            button17.UseVisualStyleBackColor = false;
-            // 
-            // button18
-            // 
-            button18.BackColor = Color.OrangeRed;
-            button18.Enabled = false;
-            button18.Font = new Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button18.Location = new Point(286, 373);
-            button18.Name = "button18";
-            button18.Size = new Size(59, 31);
-            button18.TabIndex = 15;
-            button18.Text = "Dolu";
-            button18.UseVisualStyleBackColor = false;
             // 
             // btnOda115
             // 
@@ -558,6 +532,30 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // button17
+            // 
+            button17.BackColor = Color.LimeGreen;
+            button17.Enabled = false;
+            button17.Font = new Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button17.Location = new Point(833, 433);
+            button17.Name = "button17";
+            button17.Size = new Size(59, 31);
+            button17.TabIndex = 18;
+            button17.Text = "Boş";
+            button17.UseVisualStyleBackColor = false;
+            // 
+            // button18
+            // 
+            button18.BackColor = Color.OrangeRed;
+            button18.Enabled = false;
+            button18.Font = new Font("Microsoft YaHei", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button18.Location = new Point(833, 396);
+            button18.Name = "button18";
+            button18.Size = new Size(59, 31);
+            button18.TabIndex = 17;
+            button18.Text = "Dolu";
+            button18.UseVisualStyleBackColor = false;
+            // 
             // FrmYeniMusteri
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -565,6 +563,8 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(1036, 476);
+            Controls.Add(button17);
+            Controls.Add(button18);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(groupBox2);
@@ -573,6 +573,7 @@
             MinimizeBox = false;
             Name = "FrmYeniMusteri";
             Text = "Yeni Müşteri Ekle";
+            Load += FrmYeniMusteri_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -615,12 +616,12 @@
         private Button btnOda103;
         private Button btnOda102;
         private Button btnOda101;
-        private Button button17;
-        private Button button18;
         private TextBox txtUcret;
         private Label label9;
         private Label lblGunSayisi;
         private Button button1;
         private Button button2;
+        private Button button17;
+        private Button button18;
     }
 }
