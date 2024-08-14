@@ -78,6 +78,7 @@
             txtSifre.Name = "txtSifre";
             txtSifre.Size = new Size(174, 27);
             txtSifre.TabIndex = 3;
+            txtSifre.UseSystemPasswordChar = true;
             // 
             // btnGirisYap
             // 

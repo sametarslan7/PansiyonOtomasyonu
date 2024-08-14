@@ -27,3 +27,4 @@ C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\bin\Debug\net7.0-win
 C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\obj\Debug\net7.0-windows\PansiyonUygulamasi.csproj.AssemblyReference.cache
 C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\obj\Debug\net7.0-windows\PansiyonUygulamasi.csproj.CopyComplete
+C:\Users\user\Desktop\PansiyonUygulamasi\PansiyonUygulamasi\obj\Debug\net7.0-windows\PansiyonUygulamasi.FrmMusteriler.resources
