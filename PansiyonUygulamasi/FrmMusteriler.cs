@@ -105,7 +105,7 @@ namespace PansiyonUygulamasi
         {
             baglanti.Open();
             SqlCommand komut3 = new SqlCommand("update TBLMUSTERI set MUSTERIAD=@p1,MUSTERISOYAD=@p2,MUSTERITELEFON=@p3,MUSTERIMAIL=@p4,MUSTERITC=@p5,ODANO=@p6,GIRISTARIHI=@p7,CIKISTARIHI=@p8,UCRET=@p9", baglanti);
-            komut3.Parameters.AddWithValue("@p1",txtAd.Text);
+            komut3.Parameters.AddWithValue("@p1", txtAd.Text);
             komut3.Parameters.AddWithValue("@p2", txtSoyad.Text);
             komut3.Parameters.AddWithValue("@p3", maskedTelefon.Text);
             komut3.Parameters.AddWithValue("@p4", txtMail.Text);
@@ -117,6 +117,34 @@ namespace PansiyonUygulamasi
             komut3.ExecuteNonQuery();
             baglanti.Close();
             verilerigoster();
+        }
+
+        private void btnAra_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select * from TBLMUSTERI where MUSTERIAD=@p1", baglanti);
+            komut.Parameters.AddWithValue("@p1", txtAra.Text);
+            SqlDataReader oku = komut.ExecuteReader();
+
+            while (oku.Read())
+            {
+                ListViewItem ekle = new ListViewItem();
+                ekle.Text = oku["MUSTERIID"].ToString();
+                ekle.SubItems.Add(oku["MUSTERIAD"].ToString());
+                ekle.SubItems.Add(oku["MUSTERISOYAD"].ToString());
+                ekle.SubItems.Add(oku["MUSTERITELEFON"].ToString());
+                ekle.SubItems.Add(oku["MUSTERIMAIL"].ToString());
+                ekle.SubItems.Add(oku["MUSTERITC"].ToString());
+                ekle.SubItems.Add(oku["ODANO"].ToString());
+                ekle.SubItems.Add(oku["GIRISTARIHI"].ToString());
+                ekle.SubItems.Add(oku["CIKISTARIHI"].ToString());
+                ekle.SubItems.Add(oku["UCRET"].ToString());
+
+                listView1.Items.Add(ekle);
+            }
+            baglanti.Close();
+
         }
     }
 }

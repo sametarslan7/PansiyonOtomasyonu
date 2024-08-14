@@ -173,6 +173,7 @@
             btnAra.TabIndex = 38;
             btnAra.Text = "Ara";
             btnAra.UseVisualStyleBackColor = true;
+            btnAra.Click += btnAra_Click;
             // 
             // btnSil
             // 
@@ -361,7 +362,6 @@
             // txtAra
             // 
             txtAra.BackColor = Color.BlanchedAlmond;
-            txtAra.Enabled = false;
             txtAra.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtAra.Location = new Point(570, 323);
             txtAra.Name = "txtAra";
