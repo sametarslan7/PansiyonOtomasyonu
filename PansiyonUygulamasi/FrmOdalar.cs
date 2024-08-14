@@ -37,11 +37,12 @@ namespace PansiyonUygulamasi
             // Veritabanı bağlantısını aç
             baglanti.Open();
 
-            // Belirli bir paneldeki butonları kontrol et
-            foreach (Control control in groupBox1.Controls)
+            // Butonların tümünü kontrol et
+            foreach (Control control in this.Controls)
             {
-                if (control is Button btn && btn.Name.StartsWith("btnOda"))
+                if (control is Button)
                 {
+                    Button btn = (Button)control;
                     string odaNo = new string(btn.Text.Where(char.IsDigit).ToArray());
 
                     // SQL komutunu oluştur
@@ -51,16 +52,16 @@ namespace PansiyonUygulamasi
                     // Sorguyu çalıştır ve müşteri sayısını kontrol et
                     int customerCount = (int)komut2.ExecuteScalar();
 
-                    // Eğer müşteri yoksa butonu devre dışı bırak ve rengini kırmızı yap
-                    if (customerCount == 0)
+                    // Eğer müşteri yoksa butonu devre dışı bırak
+                    if (customerCount == 0 || customerCount < 0)
                     {
-                        btn.BackColor = Color.Red;
                         btn.Enabled = false;
+                        btn.BackColor = Color.Red;
                     }
                     else
                     {
-                        btn.BackColor = Color.Green;
                         btn.Enabled = true;
+                        btn.BackColor = Color.Green;
                     }
                 }
             }
