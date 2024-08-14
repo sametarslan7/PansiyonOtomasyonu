@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,8 @@ namespace PansiyonUygulamasi
             InitializeComponent();
         }
 
+        SqlConnection baglanti = new SqlConnection("Data Source=DESTROYERM\\SQLEXPRESS;Initial Catalog=DB_PANSIYON;Integrated Security=True");
+
         private void button1_Click(object sender, EventArgs e)
         {
             FrmAnaForm fr = new FrmAnaForm();
@@ -28,6 +31,44 @@ namespace PansiyonUygulamasi
         {
             Application.Exit();
         }
+
+        public void KontrolButonlar()
+        {
+            // Veritabanı bağlantısını aç
+            baglanti.Open();
+
+            // Belirli bir paneldeki butonları kontrol et
+            foreach (Control control in groupBox1.Controls)
+            {
+                if (control is Button btn && btn.Name.StartsWith("btnOda"))
+                {
+                    string odaNo = new string(btn.Text.Where(char.IsDigit).ToArray());
+
+                    // SQL komutunu oluştur
+                    SqlCommand komut2 = new SqlCommand("SELECT COUNT(*) FROM TBLMUSTERI WHERE ODANO = @p1", baglanti);
+                    komut2.Parameters.AddWithValue("@p1", odaNo);
+
+                    // Sorguyu çalıştır ve müşteri sayısını kontrol et
+                    int customerCount = (int)komut2.ExecuteScalar();
+
+                    // Eğer müşteri yoksa butonu devre dışı bırak ve rengini kırmızı yap
+                    if (customerCount == 0)
+                    {
+                        btn.BackColor = Color.Red;
+                        btn.Enabled = false;
+                    }
+                    else
+                    {
+                        btn.BackColor = Color.Green;
+                        btn.Enabled = true;
+                    }
+                }
+            }
+
+            // Bağlantıyı kapat
+            baglanti.Close();
+        }
+
 
         private void btnOda101_Click(object sender, EventArgs e)
         {
@@ -132,6 +173,11 @@ namespace PansiyonUygulamasi
             FrmOdaDetay fr = new FrmOdaDetay(btnOda115);
             fr.Show();
             this.Close();
+        }
+
+        private void FrmOdalar_Load(object sender, EventArgs e)
+        {
+            KontrolButonlar();
         }
     }
 }
