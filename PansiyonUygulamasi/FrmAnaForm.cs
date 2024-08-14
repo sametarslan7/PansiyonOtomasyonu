@@ -33,7 +33,21 @@ namespace PansiyonUygulamasi
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmOdalar fr=new FrmOdalar();
+            FrmOdalar fr = new FrmOdalar();
+            fr.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmMusteriler fr = new FrmMusteriler();
+            fr.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FrmAdminler fr=new FrmAdminler();
             fr.Show();
             this.Hide();
         }

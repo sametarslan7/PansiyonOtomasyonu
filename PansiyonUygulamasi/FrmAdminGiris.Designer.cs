@@ -38,6 +38,7 @@
             label3 = new Label();
             button2 = new Button();
             button1 = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -82,13 +83,15 @@
             // 
             // btnGirisYap
             // 
+            btnGirisYap.BackColor = Color.MediumSeaGreen;
             btnGirisYap.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnGirisYap.Location = new Point(206, 336);
+            btnGirisYap.Location = new Point(191, 333);
             btnGirisYap.Name = "btnGirisYap";
             btnGirisYap.Size = new Size(156, 30);
             btnGirisYap.TabIndex = 4;
             btnGirisYap.Text = "Giriş Yap";
-            btnGirisYap.UseVisualStyleBackColor = true;
+            btnGirisYap.UseVisualStyleBackColor = false;
+            btnGirisYap.Click += btnGirisYap_Click;
             // 
             // pictureBox1
             // 
@@ -135,6 +138,18 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // button3
+            // 
+            button3.BackColor = Color.IndianRed;
+            button3.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Location = new Point(432, 333);
+            button3.Name = "button3";
+            button3.Size = new Size(156, 30);
+            button3.TabIndex = 9;
+            button3.Text = "Kayıt Ol";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
             // FrmAdminGiris
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -142,6 +157,7 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(722, 450);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label3);
@@ -171,5 +187,6 @@
         private Label label3;
         private Button button2;
         private Button button1;
+        private Button button3;
     }
 }

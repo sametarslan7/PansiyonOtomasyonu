@@ -4,7 +4,13 @@
     <Compile Update="FrmAdminGiris.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmAdminler.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmAnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmKayit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmMusteriler.cs">

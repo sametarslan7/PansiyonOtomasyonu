@@ -7,54 +7,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using System.Data.Sql;
+using System.Data.SqlClient;
 
 
 namespace PansiyonUygulamasi
 {
-    public partial class FrmMusteriler : Form
+    public partial class FrmAdminler : Form
     {
-        public FrmMusteriler()
+        public FrmAdminler()
         {
             InitializeComponent();
         }
         SqlConnection baglanti = new SqlConnection("Data Source=DESTROYERM\\SQLEXPRESS;Initial Catalog=DB_PANSIYON;Integrated Security=True");
-        private void verilerigoster()
+
+        private void adminleriListele()
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("select * from TBLMUSTERI", baglanti);
+            SqlCommand komut = new SqlCommand("select * from TBLADMIN", baglanti);
             SqlDataReader oku = komut.ExecuteReader();
 
             while (oku.Read())
             {
                 ListViewItem ekle = new ListViewItem();
-                ekle.Text = oku["MUSTERIID"].ToString();
-                ekle.SubItems.Add(oku["MUSTERIAD"].ToString());
-                ekle.SubItems.Add(oku["MUSTERISOYAD"].ToString());
-                ekle.SubItems.Add(oku["MUSTERITELEFON"].ToString());
-                ekle.SubItems.Add(oku["MUSTERIMAIL"].ToString());
-                ekle.SubItems.Add(oku["MUSTERITC"].ToString());
-                ekle.SubItems.Add(oku["ODANO"].ToString());
-                ekle.SubItems.Add(oku["GIRISTARIHI"].ToString());
-                ekle.SubItems.Add(oku["CIKISTARIHI"].ToString());
-                ekle.SubItems.Add(oku["UCRET"].ToString());
+                ekle.Text = oku["ADMINID"].ToString();
+                ekle.SubItems.Add(oku["ADMINKULLANICIAD"].ToString());
+                ekle.SubItems.Add(oku["ADMINSIFRE"].ToString());
 
                 listView1.Items.Add(ekle);
             }
             baglanti.Close();
-
         }
 
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void FrmAdminler_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void FrmMusteriler_Load(object sender, EventArgs e)
-        {
-            verilerigoster();
+            adminleriListele();
         }
 
         private void button1_Click(object sender, EventArgs e)

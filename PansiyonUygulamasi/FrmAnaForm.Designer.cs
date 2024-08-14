@@ -40,6 +40,8 @@
             button5 = new Button();
             button6 = new Button();
             label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -68,7 +70,7 @@
             button1.BackgroundImageLayout = ImageLayout.Stretch;
             button1.Location = new Point(82, 186);
             button1.Name = "button1";
-            button1.Size = new Size(92, 99);
+            button1.Size = new Size(100, 99);
             button1.TabIndex = 2;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
@@ -79,7 +81,7 @@
             button2.BackgroundImageLayout = ImageLayout.Stretch;
             button2.Location = new Point(236, 186);
             button2.Name = "button2";
-            button2.Size = new Size(92, 99);
+            button2.Size = new Size(98, 99);
             button2.TabIndex = 3;
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
@@ -108,7 +110,7 @@
             button3.BackgroundImageLayout = ImageLayout.Stretch;
             button3.Location = new Point(393, 186);
             button3.Name = "button3";
-            button3.Size = new Size(92, 99);
+            button3.Size = new Size(100, 99);
             button3.TabIndex = 6;
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
@@ -119,9 +121,10 @@
             button4.BackgroundImageLayout = ImageLayout.Stretch;
             button4.Location = new Point(544, 186);
             button4.Name = "button4";
-            button4.Size = new Size(92, 99);
+            button4.Size = new Size(105, 99);
             button4.TabIndex = 7;
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -142,6 +145,7 @@
             button6.Size = new Size(92, 99);
             button6.TabIndex = 9;
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // label5
             // 
@@ -152,12 +156,32 @@
             label5.TabIndex = 10;
             label5.Text = "Odalar";
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(557, 299);
+            label6.Name = "label6";
+            label6.Size = new Size(79, 20);
+            label6.TabIndex = 11;
+            label6.Text = "Müşteriler";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(841, 299);
+            label7.Name = "label7";
+            label7.Size = new Size(72, 20);
+            label7.TabIndex = 12;
+            label7.Text = "Adminler";
+            // 
             // FrmAnaForm
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Teal;
             ClientSize = new Size(1009, 466);
+            Controls.Add(label7);
+            Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(button6);
             Controls.Add(button5);
@@ -190,5 +214,7 @@
         private Button button5;
         private Button button6;
         private Label label5;
+        private Label label6;
+        private Label label7;
     }
 }

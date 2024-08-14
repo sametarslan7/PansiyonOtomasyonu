@@ -1,6 +1,6 @@
 ﻿namespace PansiyonUygulamasi
 {
-    partial class FrmMusteriler
+    partial class FrmAdminler
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMusteriler));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminler));
             listView1 = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
             columnHeader3 = new ColumnHeader();
-            columnHeader4 = new ColumnHeader();
-            columnHeader5 = new ColumnHeader();
-            columnHeader6 = new ColumnHeader();
-            columnHeader7 = new ColumnHeader();
-            columnHeader8 = new ColumnHeader();
-            columnHeader9 = new ColumnHeader();
-            columnHeader10 = new ColumnHeader();
+            pictureBox1 = new PictureBox();
+            label1 = new Label();
             button2 = new Button();
             button1 = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // listView1
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6, columnHeader7, columnHeader8, columnHeader9, columnHeader10 });
-            listView1.Location = new Point(12, 280);
+            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3 });
+            listView1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            listView1.Location = new Point(78, 216);
             listView1.Name = "listView1";
-            listView1.Size = new Size(836, 267);
+            listView1.Size = new Size(265, 321);
             listView1.TabIndex = 0;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
-            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
             // columnHeader1
             // 
@@ -61,56 +57,42 @@
             // 
             // columnHeader2
             // 
-            columnHeader2.Text = "Adı";
-            columnHeader2.Width = 70;
+            columnHeader2.Text = "Kullanıcı Adı";
+            columnHeader2.Width = 100;
             // 
             // columnHeader3
             // 
-            columnHeader3.Text = "Soyadı";
-            columnHeader3.Width = 80;
+            columnHeader3.Text = "Şifre";
+            columnHeader3.Width = 100;
             // 
-            // columnHeader4
+            // pictureBox1
             // 
-            columnHeader4.Text = "Telefon Numarası";
-            columnHeader4.Width = 90;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(108, 48);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(207, 109);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
             // 
-            // columnHeader5
+            // label1
             // 
-            columnHeader5.Text = "Mail";
-            columnHeader5.Width = 100;
-            // 
-            // columnHeader6
-            // 
-            columnHeader6.Text = "TC Kimlik No";
-            columnHeader6.Width = 100;
-            // 
-            // columnHeader7
-            // 
-            columnHeader7.Text = "Oda No";
-            columnHeader7.Width = 70;
-            // 
-            // columnHeader8
-            // 
-            columnHeader8.Text = "Giriş Tarihi";
-            columnHeader8.Width = 100;
-            // 
-            // columnHeader9
-            // 
-            columnHeader9.Text = "Çıkış Tarihi";
-            columnHeader9.Width = 100;
-            // 
-            // columnHeader10
-            // 
-            columnHeader10.Text = "Ücret";
+            label1.AutoSize = true;
+            label1.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(133, 176);
+            label1.Name = "label1";
+            label1.Size = new Size(150, 24);
+            label1.TabIndex = 2;
+            label1.Text = "Yönetici Listesi";
             // 
             // button2
             // 
             button2.BackColor = SystemColors.HighlightText;
             button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
             button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Location = new Point(813, 12);
+            button2.Location = new Point(380, 12);
             button2.Name = "button2";
-            button2.Size = new Size(35, 34);
+            button2.Size = new Size(35, 30);
             button2.TabIndex = 35;
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
@@ -120,43 +102,40 @@
             button1.BackColor = SystemColors.HighlightText;
             button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Location = new Point(764, 12);
+            button1.Location = new Point(331, 12);
             button1.Name = "button1";
-            button1.Size = new Size(35, 34);
+            button1.Size = new Size(35, 30);
             button1.TabIndex = 34;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // FrmMusteriler
+            // FrmAdminler
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.InactiveCaption;
-            ClientSize = new Size(862, 559);
+            BackColor = SystemColors.GradientInactiveCaption;
+            ClientSize = new Size(427, 579);
             Controls.Add(button2);
             Controls.Add(button1);
+            Controls.Add(label1);
+            Controls.Add(pictureBox1);
             Controls.Add(listView1);
-            Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Margin = new Padding(4);
-            Name = "FrmMusteriler";
-            Text = "Müşteriler";
-            Load += FrmMusteriler_Load;
+            Name = "FrmAdminler";
+            Text = "FrmAdminler";
+            Load += FrmAdminler_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private ListView listView1;
+        private PictureBox pictureBox1;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
-        private ColumnHeader columnHeader4;
-        private ColumnHeader columnHeader5;
-        private ColumnHeader columnHeader6;
-        private ColumnHeader columnHeader7;
-        private ColumnHeader columnHeader8;
-        private ColumnHeader columnHeader9;
-        private ColumnHeader columnHeader10;
+        private Label label1;
         private Button button2;
         private Button button1;
     }
