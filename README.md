@@ -35,5 +35,6 @@ CREATE TABLE [dbo].[TBL_TABLOADI](
 	[ODANO] [varchar](3) NULL,
 	[GIRISTARIHI] [date] NULL,
 	[CIKISTARIHI] [date] NULL,
-	[UCRET] [varchar](20) NULL,)
+	[UCRET] [varchar](20) NULL,
+ )
 
