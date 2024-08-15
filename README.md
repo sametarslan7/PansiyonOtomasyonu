@@ -16,6 +16,7 @@
 
 ✓  Ekstra olarak uygulamayı kullanabilecek olan yöneticilerin listelendiği Adminler formu da oluşturuldu.
 
-
-
+--- UYARI ---
+( Uygulamayı kendi bilgisayarında çalıştırıp denemek isteyen kişiler , veri tabanı bağlantısı kısmında sıkıntı yaşamamak adına , kendi veir tabanı bilgilerini ilgili kısımlara girmelidir. 
+Aksi durumda veri tabanına kayıt işlemleri çalışmayacak ve uygulama hata verecektir. )
 
