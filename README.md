@@ -23,7 +23,7 @@ Aksi durumda veri tabanına kayıt işlemleri çalışmayacak ve uygulama hata v
 
 Uygulamada TBLADMIN ve TBLMUSTERI adında 2 tablo oluşturulmuştur . Bu tabloların create kodu aşağıdaki gibidir : 
 
---TBLMUSTERİ --
+-- TBLMUSTERİ --
 
 CREATE TABLE [dbo].[TBL_TABLOADI](
 	[MUSTERIID] [int] IDENTITY(1,1) NOT NULL,
@@ -36,5 +36,14 @@ CREATE TABLE [dbo].[TBL_TABLOADI](
 	[GIRISTARIHI] [date] NULL,
 	[CIKISTARIHI] [date] NULL,
 	[UCRET] [varchar](20) NULL,
+ 	PRIMARY KEY ([MUSTERIID])
  )
 
+-- TBLADMIN --
+
+CREATE TABLE [dbo].[TBL_TABLOADI](
+	[ADMINID] [int] IDENTITY(1,1) NOT NULL,
+	[ADMINKULLANICIAD] [varchar](50) NULL,
+	[ADMINSIFRE] [varchar](20) NULL,
+ 	PRIMARY KEY ([ADMINID])
+)
