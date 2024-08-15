@@ -26,7 +26,6 @@ Uygulamada TBLADMIN ve TBLMUSTERI adında 2 tablo oluşturulmuştur . Bu tablola
 --TBLMUSTERİ --
 
 CREATE TABLE [dbo].[TBL_TABLOADI](
-
 	[MUSTERIID] [int] IDENTITY(1,1) NOT NULL,
 	[MUSTERIAD] [varchar](50) NULL,
 	[MUSTERISOYAD] [varchar](50) NULL,
@@ -36,6 +35,5 @@ CREATE TABLE [dbo].[TBL_TABLOADI](
 	[ODANO] [varchar](3) NULL,
 	[GIRISTARIHI] [date] NULL,
 	[CIKISTARIHI] [date] NULL,
-	[UCRET] [varchar](20) NULL,
-)
+	[UCRET] [varchar](20) NULL,)
 
