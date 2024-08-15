@@ -123,7 +123,7 @@
             txtUcret.Location = new Point(199, 327);
             txtUcret.Name = "txtUcret";
             txtUcret.Size = new Size(278, 25);
-            txtUcret.TabIndex = 38;
+            txtUcret.TabIndex = 8;
             txtUcret.TextChanged += txtUcret_TextChanged;
             // 
             // label9
@@ -143,7 +143,7 @@
             btnMusteriEkle.Location = new Point(199, 396);
             btnMusteriEkle.Name = "btnMusteriEkle";
             btnMusteriEkle.Size = new Size(148, 31);
-            btnMusteriEkle.TabIndex = 36;
+            btnMusteriEkle.TabIndex = 9;
             btnMusteriEkle.Text = "Müşteri Ekle";
             btnMusteriEkle.UseVisualStyleBackColor = false;
             btnMusteriEkle.Click += btnMusteriEkle_Click;
@@ -154,7 +154,7 @@
             dateTimePickerCikis.Location = new Point(199, 294);
             dateTimePickerCikis.Name = "dateTimePickerCikis";
             dateTimePickerCikis.Size = new Size(200, 27);
-            dateTimePickerCikis.TabIndex = 35;
+            dateTimePickerCikis.TabIndex = 7;
             dateTimePickerCikis.ValueChanged += dateTimePickerCikis_ValueChanged;
             // 
             // dateTimePickerGiris
@@ -163,7 +163,7 @@
             dateTimePickerGiris.Location = new Point(199, 257);
             dateTimePickerGiris.Name = "dateTimePickerGiris";
             dateTimePickerGiris.Size = new Size(200, 27);
-            dateTimePickerGiris.TabIndex = 34;
+            dateTimePickerGiris.TabIndex = 6;
             // 
             // maskedTCKimlik
             // 
@@ -173,7 +173,7 @@
             maskedTCKimlik.Mask = "00000000000";
             maskedTCKimlik.Name = "maskedTCKimlik";
             maskedTCKimlik.Size = new Size(278, 27);
-            maskedTCKimlik.TabIndex = 33;
+            maskedTCKimlik.TabIndex = 4;
             maskedTCKimlik.ValidatingType = typeof(int);
             // 
             // maskedTelefon
@@ -184,7 +184,7 @@
             maskedTelefon.Mask = "(999) 000-0000";
             maskedTelefon.Name = "maskedTelefon";
             maskedTelefon.Size = new Size(278, 27);
-            maskedTelefon.TabIndex = 32;
+            maskedTelefon.TabIndex = 2;
             // 
             // txtOdaNo
             // 
@@ -194,7 +194,7 @@
             txtOdaNo.Location = new Point(199, 224);
             txtOdaNo.Name = "txtOdaNo";
             txtOdaNo.Size = new Size(278, 25);
-            txtOdaNo.TabIndex = 31;
+            txtOdaNo.TabIndex = 5;
             // 
             // txtMail
             // 
@@ -203,7 +203,7 @@
             txtMail.Location = new Point(199, 158);
             txtMail.Name = "txtMail";
             txtMail.Size = new Size(278, 25);
-            txtMail.TabIndex = 30;
+            txtMail.TabIndex = 3;
             // 
             // txtSoyad
             // 
@@ -212,7 +212,7 @@
             txtSoyad.Location = new Point(199, 92);
             txtSoyad.Name = "txtSoyad";
             txtSoyad.Size = new Size(278, 25);
-            txtSoyad.TabIndex = 29;
+            txtSoyad.TabIndex = 1;
             // 
             // txtAd
             // 
@@ -221,7 +221,7 @@
             txtAd.Location = new Point(199, 62);
             txtAd.Name = "txtAd";
             txtAd.Size = new Size(278, 25);
-            txtAd.TabIndex = 28;
+            txtAd.TabIndex = 0;
             // 
             // label8
             // 
@@ -572,6 +572,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FrmYeniMusteri";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Yeni Müşteri Ekle";
             Load += FrmYeniMusteri_Load;
             groupBox1.ResumeLayout(false);

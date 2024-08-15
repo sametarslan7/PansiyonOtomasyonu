@@ -304,6 +304,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.SkyBlue;
             ClientSize = new Size(568, 668);
             Controls.Add(panel2);
@@ -323,7 +324,10 @@
             Controls.Add(btnOda103);
             Controls.Add(btnOda102);
             Controls.Add(btnOda101);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FrmOdalar";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Odalar";
             Load += FrmOdalar_Load;
             panel1.ResumeLayout(false);

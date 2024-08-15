@@ -21,12 +21,6 @@ namespace PansiyonUygulamasi
         }
         SqlConnection baglanti = new SqlConnection("Data Source=DESTROYERM\\SQLEXPRESS;Initial Catalog=DB_PANSIYON;Integrated Security=True");
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FrmAnaForm fr = new FrmAnaForm();
-            fr.Show();
-            this.Close();
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -44,6 +38,10 @@ namespace PansiyonUygulamasi
                 komut.Parameters.AddWithValue("@p2", txtSifre.Text.ToString());
                 komut.ExecuteNonQuery();
                 MessageBox.Show("Yeni Yönetici Kaydı Oluşturuldu");
+
+                FrmAdminGiris fr=new FrmAdminGiris();
+                fr.Show();
+                this.Close();
             }
             else
             {

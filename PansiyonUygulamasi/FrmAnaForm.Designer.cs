@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnaForm));
             label1 = new Label();
             label2 = new Label();
@@ -42,6 +43,10 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
+            label10 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -130,17 +135,18 @@
             // 
             button5.BackgroundImage = (Image)resources.GetObject("button5.BackgroundImage");
             button5.BackgroundImageLayout = ImageLayout.Stretch;
-            button5.Location = new Point(686, 186);
+            button5.Location = new Point(847, 186);
             button5.Name = "button5";
             button5.Size = new Size(92, 99);
             button5.TabIndex = 8;
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
             button6.BackgroundImage = (Image)resources.GetObject("button6.BackgroundImage");
             button6.BackgroundImageLayout = ImageLayout.Stretch;
-            button6.Location = new Point(832, 186);
+            button6.Location = new Point(699, 186);
             button6.Name = "button6";
             button6.Size = new Size(92, 99);
             button6.TabIndex = 9;
@@ -168,18 +174,55 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(841, 299);
+            label7.Location = new Point(708, 299);
             label7.Name = "label7";
             label7.Size = new Size(72, 20);
             label7.TabIndex = 12;
             label7.Text = "Adminler";
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Book Antiqua", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(766, 39);
+            label8.Name = "label8";
+            label8.Size = new Size(47, 20);
+            label8.TabIndex = 13;
+            label8.Text = "Tarih";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Book Antiqua", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Location = new Point(823, 79);
+            label9.Name = "label9";
+            label9.Size = new Size(38, 20);
+            label9.TabIndex = 14;
+            label9.Text = "Saat";
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(869, 299);
+            label10.Name = "label10";
+            label10.Size = new Size(40, 20);
+            label10.TabIndex = 15;
+            label10.Text = "Çıkış";
+            // 
             // FrmAnaForm
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.Teal;
             ClientSize = new Size(1009, 466);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -195,8 +238,12 @@
             Controls.Add(label1);
             Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             Margin = new Padding(4);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FrmAnaForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Ana Sayfa";
+            Load += FrmAnaForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -216,5 +263,9 @@
         private Label label5;
         private Label label6;
         private Label label7;
+        private Label label8;
+        private Label label9;
+        private System.Windows.Forms.Timer timer1;
+        private Label label10;
     }
 }

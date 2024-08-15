@@ -225,6 +225,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.SkyBlue;
             ClientSize = new Size(448, 432);
             Controls.Add(label4);
@@ -247,7 +248,10 @@
             Controls.Add(lblOdaNo);
             Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Margin = new Padding(4);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FrmOdaDetay";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Oda Bilgileri";
             Load += FrmOdaDetay_Load;
             ResumeLayout(false);

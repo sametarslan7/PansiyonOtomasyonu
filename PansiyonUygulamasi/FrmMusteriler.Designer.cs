@@ -194,7 +194,7 @@
             txtUcret.Location = new Point(136, 326);
             txtUcret.Name = "txtUcret";
             txtUcret.Size = new Size(278, 25);
-            txtUcret.TabIndex = 57;
+            txtUcret.TabIndex = 10;
             // 
             // label9
             // 
@@ -212,7 +212,7 @@
             dateTimePickerCikis.Location = new Point(136, 293);
             dateTimePickerCikis.Name = "dateTimePickerCikis";
             dateTimePickerCikis.Size = new Size(200, 27);
-            dateTimePickerCikis.TabIndex = 55;
+            dateTimePickerCikis.TabIndex = 9;
             // 
             // dateTimePickerGiris
             // 
@@ -220,7 +220,7 @@
             dateTimePickerGiris.Location = new Point(136, 256);
             dateTimePickerGiris.Name = "dateTimePickerGiris";
             dateTimePickerGiris.Size = new Size(200, 27);
-            dateTimePickerGiris.TabIndex = 54;
+            dateTimePickerGiris.TabIndex = 8;
             // 
             // maskedTCKimlik
             // 
@@ -230,7 +230,7 @@
             maskedTCKimlik.Mask = "00000000000";
             maskedTCKimlik.Name = "maskedTCKimlik";
             maskedTCKimlik.Size = new Size(278, 27);
-            maskedTCKimlik.TabIndex = 53;
+            maskedTCKimlik.TabIndex = 6;
             maskedTCKimlik.ValidatingType = typeof(int);
             // 
             // maskedTelefon
@@ -241,7 +241,7 @@
             maskedTelefon.Mask = "(999) 000-0000";
             maskedTelefon.Name = "maskedTelefon";
             maskedTelefon.Size = new Size(278, 27);
-            maskedTelefon.TabIndex = 52;
+            maskedTelefon.TabIndex = 4;
             // 
             // txtOdaNo
             // 
@@ -250,7 +250,7 @@
             txtOdaNo.Location = new Point(136, 223);
             txtOdaNo.Name = "txtOdaNo";
             txtOdaNo.Size = new Size(278, 25);
-            txtOdaNo.TabIndex = 51;
+            txtOdaNo.TabIndex = 7;
             // 
             // txtMail
             // 
@@ -259,7 +259,7 @@
             txtMail.Location = new Point(136, 157);
             txtMail.Name = "txtMail";
             txtMail.Size = new Size(278, 25);
-            txtMail.TabIndex = 50;
+            txtMail.TabIndex = 5;
             // 
             // txtSoyad
             // 
@@ -268,7 +268,7 @@
             txtSoyad.Location = new Point(136, 91);
             txtSoyad.Name = "txtSoyad";
             txtSoyad.Size = new Size(278, 25);
-            txtSoyad.TabIndex = 49;
+            txtSoyad.TabIndex = 3;
             // 
             // txtAd
             // 
@@ -277,7 +277,7 @@
             txtAd.Location = new Point(136, 61);
             txtAd.Name = "txtAd";
             txtAd.Size = new Size(278, 25);
-            txtAd.TabIndex = 48;
+            txtAd.TabIndex = 2;
             // 
             // label8
             // 
@@ -366,7 +366,7 @@
             txtAra.Location = new Point(570, 323);
             txtAra.Name = "txtAra";
             txtAra.Size = new Size(278, 25);
-            txtAra.TabIndex = 59;
+            txtAra.TabIndex = 11;
             // 
             // label10
             // 
@@ -387,7 +387,7 @@
             txtID.Location = new Point(136, 30);
             txtID.Name = "txtID";
             txtID.Size = new Size(278, 25);
-            txtID.TabIndex = 61;
+            txtID.TabIndex = 1;
             // 
             // label11
             // 
@@ -439,6 +439,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FrmMusteriler";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Müşteriler";
             Load += FrmMusteriler_Load;
             ResumeLayout(false);

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKayit));
             button2 = new Button();
-            button1 = new Button();
             pictureBox1 = new PictureBox();
             label3 = new Label();
             txtSifre = new TextBox();
@@ -46,24 +45,12 @@
             button2.BackColor = SystemColors.HighlightText;
             button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
             button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Location = new Point(80, 29);
+            button2.Location = new Point(30, 29);
             button2.Name = "button2";
             button2.Size = new Size(43, 37);
             button2.TabIndex = 10;
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.HighlightText;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Location = new Point(31, 29);
-            button1.Name = "button1";
-            button1.Size = new Size(43, 37);
-            button1.TabIndex = 9;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
             // 
             // pictureBox1
             // 
@@ -140,6 +127,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 403);
             Controls.Add(btnKayitOl);
@@ -150,8 +138,10 @@
             Controls.Add(label3);
             Controls.Add(pictureBox1);
             Controls.Add(button2);
-            Controls.Add(button1);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FrmKayit";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmKayit";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -161,7 +151,6 @@
         #endregion
 
         private Button button2;
-        private Button button1;
         private PictureBox pictureBox1;
         private Label label3;
         private TextBox txtSifre;

@@ -37,7 +37,6 @@
             pictureBox1 = new PictureBox();
             label3 = new Label();
             button2 = new Button();
-            button1 = new Button();
             button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -119,24 +118,12 @@
             button2.BackColor = SystemColors.HighlightText;
             button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
             button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Location = new Point(79, 12);
+            button2.Location = new Point(27, 12);
             button2.Name = "button2";
             button2.Size = new Size(43, 37);
             button2.TabIndex = 8;
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.HighlightText;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Location = new Point(30, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(43, 37);
-            button1.TabIndex = 7;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
             // 
             // button3
             // 
@@ -159,7 +146,6 @@
             ClientSize = new Size(722, 450);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(pictureBox1);
             Controls.Add(btnGirisYap);
@@ -170,6 +156,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FrmAdminGiris";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin Giriş";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -186,7 +173,6 @@
         private PictureBox pictureBox1;
         private Label label3;
         private Button button2;
-        private Button button1;
         private Button button3;
     }
 }

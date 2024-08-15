@@ -113,6 +113,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(427, 579);
             Controls.Add(button2);
@@ -120,7 +121,10 @@
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(listView1);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FrmAdminler";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmAdminler";
             Load += FrmAdminler_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

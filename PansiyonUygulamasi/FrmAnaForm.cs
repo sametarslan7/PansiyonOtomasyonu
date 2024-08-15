@@ -47,9 +47,25 @@ namespace PansiyonUygulamasi
 
         private void button6_Click(object sender, EventArgs e)
         {
-            FrmAdminler fr=new FrmAdminler();
+            FrmAdminler fr = new FrmAdminler();
             fr.Show();
             this.Hide();
+        }
+
+        private void FrmAnaForm_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label8.Text = DateTime.Now.ToLongDateString();
+            label9.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -12,12 +12,6 @@ namespace PansiyonUygulamasi
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FrmAnaForm fr = new FrmAnaForm();
-            fr.Show();
-            this.Close();
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -33,9 +27,11 @@ namespace PansiyonUygulamasi
 
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
+            FrmAdminGiris fradmin=new FrmAdminGiris();
             FrmAnaForm fr = new FrmAnaForm();
+            fradmin.Close();
             fr.Show();
-            this.Close();
+            
         }
     }
 }
