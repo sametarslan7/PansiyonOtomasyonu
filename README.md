@@ -21,3 +21,20 @@
 ( Uygulamayı kendi bilgisayarında çalıştırıp denemek isteyen kişiler , veri tabanı bağlantısı kısmında sıkıntı yaşamamak adına , kendi veir tabanı bilgilerini ilgili kısımlara girmelidir. 
 Aksi durumda veri tabanına kayıt işlemleri çalışmayacak ve uygulama hata verecektir. )
 
+Uygulamada TBLADMIN ve TBLMUSTERI adında 2 tablo oluşturulmuştur . Bu tabloların create kodu aşağıdaki gibidir : 
+
+--TBLMUSTERİ --
+
+CREATE TABLE [dbo].[TBL_TABLOADI](
+	[MUSTERIID] [int] IDENTITY(1,1) NOT NULL,
+	[MUSTERIAD] [varchar](50) NULL,
+	[MUSTERISOYAD] [varchar](50) NULL,
+	[MUSTERITELEFON] [varchar](15) NULL,
+	[MUSTERIMAIL] [varchar](50) NULL,
+	[MUSTERITC] [varchar](12) NULL,
+	[ODANO] [varchar](3) NULL,
+	[GIRISTARIHI] [date] NULL,
+	[CIKISTARIHI] [date] NULL,
+	[UCRET] [varchar](20) NULL,
+)
+
