@@ -27,10 +27,9 @@ namespace PansiyonUygulamasi
 
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
-            FrmAdminGiris fradmin=new FrmAdminGiris();
             FrmAnaForm fr = new FrmAnaForm();
-            fradmin.Close();
             fr.Show();
+            this.Hide();
             
         }
     }

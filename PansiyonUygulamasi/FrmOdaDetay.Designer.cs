@@ -52,10 +52,12 @@
             // lblOdaNo
             // 
             lblOdaNo.AutoSize = true;
-            lblOdaNo.Font = new Font("Bookman Old Style", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblOdaNo.Location = new Point(123, 74);
+            lblOdaNo.BackColor = Color.Transparent;
+            lblOdaNo.Font = new Font("Broadway", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblOdaNo.ForeColor = SystemColors.ButtonFace;
+            lblOdaNo.Location = new Point(80, 73);
             lblOdaNo.Name = "lblOdaNo";
-            lblOdaNo.Size = new Size(83, 19);
+            lblOdaNo.Size = new Size(112, 21);
             lblOdaNo.TabIndex = 0;
             lblOdaNo.Text = "lblOdaNo";
             lblOdaNo.Click += lblOdaNo_Click;
@@ -63,16 +65,19 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Bookman Old Style", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(177, 74);
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Broadway", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ButtonFace;
+            label2.Location = new Point(134, 73);
             label2.Name = "label2";
-            label2.Size = new Size(191, 19);
+            label2.Size = new Size(264, 21);
             label2.TabIndex = 1;
             label2.Text = "Numaralı Oda Bilgileri";
             // 
             // lblAd
             // 
             lblAd.AutoSize = true;
+            lblAd.BackColor = Color.Transparent;
             lblAd.Location = new Point(198, 137);
             lblAd.Name = "lblAd";
             lblAd.Size = new Size(49, 21);
@@ -82,6 +87,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.Location = new Point(64, 137);
             label3.Name = "label3";
             label3.Size = new Size(43, 21);
@@ -91,6 +97,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Location = new Point(64, 178);
             label1.Name = "label1";
             label1.Size = new Size(67, 21);
@@ -100,6 +107,7 @@
             // lblSoyad
             // 
             lblSoyad.AutoSize = true;
+            lblSoyad.BackColor = Color.Transparent;
             lblSoyad.Location = new Point(198, 178);
             lblSoyad.Name = "lblSoyad";
             lblSoyad.Size = new Size(73, 21);
@@ -109,6 +117,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Location = new Point(64, 219);
             label5.Name = "label5";
             label5.Size = new Size(76, 21);
@@ -118,6 +127,7 @@
             // lblTelefon
             // 
             lblTelefon.AutoSize = true;
+            lblTelefon.BackColor = Color.Transparent;
             lblTelefon.Location = new Point(198, 219);
             lblTelefon.Name = "lblTelefon";
             lblTelefon.Size = new Size(82, 21);
@@ -127,6 +137,7 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
             label7.Location = new Point(64, 260);
             label7.Name = "label7";
             label7.Size = new Size(53, 21);
@@ -136,6 +147,7 @@
             // lblMail
             // 
             lblMail.AutoSize = true;
+            lblMail.BackColor = Color.Transparent;
             lblMail.Location = new Point(198, 260);
             lblMail.Name = "lblMail";
             lblMail.Size = new Size(59, 21);
@@ -145,6 +157,7 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
             label9.Location = new Point(64, 301);
             label9.Name = "label9";
             label9.Size = new Size(96, 21);
@@ -154,6 +167,7 @@
             // lblGirisTarih
             // 
             lblGirisTarih.AutoSize = true;
+            lblGirisTarih.BackColor = Color.Transparent;
             lblGirisTarih.Location = new Point(198, 301);
             lblGirisTarih.Name = "lblGirisTarih";
             lblGirisTarih.Size = new Size(94, 21);
@@ -163,6 +177,7 @@
             // label11
             // 
             label11.AutoSize = true;
+            label11.BackColor = Color.Transparent;
             label11.Location = new Point(64, 342);
             label11.Name = "label11";
             label11.Size = new Size(97, 21);
@@ -172,6 +187,7 @@
             // lblCikisTarih
             // 
             lblCikisTarih.AutoSize = true;
+            lblCikisTarih.BackColor = Color.Transparent;
             lblCikisTarih.Location = new Point(198, 342);
             lblCikisTarih.Name = "lblCikisTarih";
             lblCikisTarih.Size = new Size(95, 21);
@@ -205,6 +221,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Location = new Point(64, 376);
             label4.Name = "label4";
             label4.Size = new Size(62, 21);
@@ -215,6 +232,7 @@
             // lblUcret
             // 
             lblUcret.AutoSize = true;
+            lblUcret.BackColor = Color.Transparent;
             lblUcret.Location = new Point(198, 376);
             lblUcret.Name = "lblUcret";
             lblUcret.Size = new Size(68, 21);
@@ -227,6 +245,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.SkyBlue;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(448, 432);
             Controls.Add(label4);
             Controls.Add(lblUcret);

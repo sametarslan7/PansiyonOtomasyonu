@@ -199,10 +199,12 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Book Antiqua", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = SystemColors.Control;
             label9.Location = new Point(68, 327);
             label9.Name = "label9";
-            label9.Size = new Size(62, 21);
+            label9.Size = new Size(60, 21);
             label9.TabIndex = 56;
             label9.Text = "Ücret : ";
             // 
@@ -282,80 +284,96 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Book Antiqua", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = SystemColors.Control;
             label8.Location = new Point(33, 293);
             label8.Name = "label8";
-            label8.Size = new Size(97, 21);
+            label8.Size = new Size(110, 21);
             label8.TabIndex = 47;
             label8.Text = "Çıkış Tarihi : ";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Book Antiqua", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.Control;
             label7.Location = new Point(34, 260);
             label7.Name = "label7";
-            label7.Size = new Size(96, 21);
+            label7.Size = new Size(107, 21);
             label7.TabIndex = 46;
             label7.Text = "Giriş Tarihi : ";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Book Antiqua", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.Control;
             label6.Location = new Point(6, 227);
             label6.Name = "label6";
-            label6.Size = new Size(124, 21);
+            label6.Size = new Size(128, 21);
             label6.TabIndex = 45;
             label6.Text = "Oda Numarası : ";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Book Antiqua", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.Control;
             label5.Location = new Point(0, 194);
             label5.Name = "label5";
-            label5.Size = new Size(130, 21);
+            label5.Size = new Size(142, 21);
             label5.TabIndex = 44;
             label5.Text = "T.C. Kimlik No  :  ";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Book Antiqua", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.Control;
             label4.Location = new Point(77, 161);
             label4.Name = "label4";
-            label4.Size = new Size(53, 21);
+            label4.Size = new Size(56, 21);
             label4.TabIndex = 43;
             label4.Text = "Mail : ";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Book Antiqua", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.Control;
             label3.Location = new Point(54, 128);
             label3.Name = "label3";
-            label3.Size = new Size(76, 21);
+            label3.Size = new Size(79, 21);
             label3.TabIndex = 42;
             label3.Text = "Telefon : ";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Book Antiqua", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.Control;
             label2.Location = new Point(59, 95);
             label2.Name = "label2";
-            label2.Size = new Size(71, 21);
+            label2.Size = new Size(73, 21);
             label2.TabIndex = 41;
             label2.Text = "Soyadı : ";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Book Antiqua", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.Control;
             label1.Location = new Point(83, 62);
             label1.Name = "label1";
-            label1.Size = new Size(47, 21);
+            label1.Size = new Size(49, 21);
             label1.TabIndex = 40;
             label1.Text = "Adı : ";
             // 
@@ -371,10 +389,12 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.BackColor = Color.Transparent;
+            label10.Font = new Font("Book Antiqua", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = SystemColors.Control;
             label10.Location = new Point(502, 324);
             label10.Name = "label10";
-            label10.Size = new Size(52, 21);
+            label10.Size = new Size(54, 21);
             label10.TabIndex = 58;
             label10.Text = "İsim : ";
             label10.Click += label10_Click;
@@ -392,10 +412,12 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.BackColor = Color.Transparent;
+            label11.Font = new Font("Book Antiqua", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = SystemColors.Control;
             label11.Location = new Point(92, 34);
             label11.Name = "label11";
-            label11.Size = new Size(38, 21);
+            label11.Size = new Size(41, 21);
             label11.TabIndex = 60;
             label11.Text = "ID : ";
             // 
@@ -405,6 +427,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.InactiveCaption;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(862, 645);
             Controls.Add(txtID);
             Controls.Add(label11);

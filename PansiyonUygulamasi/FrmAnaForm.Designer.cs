@@ -52,20 +52,24 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Cooper Black", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(358, 63);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Perpetua Titling MT", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(335, 59);
             label1.Name = "label1";
-            label1.Size = new Size(301, 27);
+            label1.Size = new Size(310, 26);
             label1.TabIndex = 0;
             label1.Text = "Pansiyon Kayıt Sistemi ";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Cooper Black", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(425, 104);
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Perpetua Titling MT", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ButtonFace;
+            label2.Location = new Point(415, 100);
             label2.Name = "label2";
-            label2.Size = new Size(136, 27);
+            label2.Size = new Size(145, 26);
             label2.TabIndex = 1;
             label2.Text = "Ana Sayfa";
             // 
@@ -94,18 +98,24 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ButtonFace;
             label3.Location = new Point(96, 299);
             label3.Name = "label3";
-            label3.Size = new Size(68, 20);
+            label3.Size = new Size(83, 20);
             label3.TabIndex = 4;
             label3.Text = "Giriş Yap";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ButtonFace;
             label4.Location = new Point(223, 299);
             label4.Name = "label4";
-            label4.Size = new Size(126, 20);
+            label4.Size = new Size(149, 20);
             label4.TabIndex = 5;
             label4.Text = "Yeni Müşteri Ekle";
             // 
@@ -156,34 +166,45 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.ButtonFace;
             label5.Location = new Point(415, 299);
             label5.Name = "label5";
-            label5.Size = new Size(55, 20);
+            label5.Size = new Size(62, 20);
             label5.TabIndex = 10;
             label5.Text = "Odalar";
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ButtonFace;
             label6.Location = new Point(557, 299);
             label6.Name = "label6";
-            label6.Size = new Size(79, 20);
+            label6.Size = new Size(88, 20);
             label6.TabIndex = 11;
             label6.Text = "Müşteriler";
             // 
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.ButtonFace;
             label7.Location = new Point(708, 299);
             label7.Name = "label7";
-            label7.Size = new Size(72, 20);
+            label7.Size = new Size(79, 20);
             label7.TabIndex = 12;
             label7.Text = "Adminler";
             // 
             // label8
             // 
             label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
             label8.Font = new Font("Book Antiqua", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.ForeColor = SystemColors.ButtonHighlight;
             label8.Location = new Point(766, 39);
             label8.Name = "label8";
             label8.Size = new Size(47, 20);
@@ -193,7 +214,9 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
             label9.Font = new Font("Book Antiqua", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.ForeColor = SystemColors.ButtonHighlight;
             label9.Location = new Point(823, 79);
             label9.Name = "label9";
             label9.Size = new Size(38, 20);
@@ -207,9 +230,12 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
+            label10.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = SystemColors.ButtonFace;
             label10.Location = new Point(869, 299);
             label10.Name = "label10";
-            label10.Size = new Size(40, 20);
+            label10.Size = new Size(47, 20);
             label10.TabIndex = 15;
             label10.Text = "Çıkış";
             // 
@@ -219,6 +245,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.Teal;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1009, 466);
             Controls.Add(label10);
             Controls.Add(label9);
