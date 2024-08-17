@@ -1,51 +1,62 @@
-                 PANSİYON KAYIT UYGULAMASI
+                     PANSİYON KAYIT UYGULAMASI
+Bu proje, basit bir pansiyon-müşteri kayıt uygulaması olup, Back-End kısmı C# ile, Front-End kısmı ise Windows Form ile geliştirilmiştir. Uygulama, pansiyon yönetimini kolaylaştırmak için temel ihtiyaçları karşılayacak şekilde tasarlanmıştır.
 
-+ Basit bir pansiyon - müşteri kayıt uygulaması amaçlandı.
+ÖZELLİKLER
+• Kullanıcı Girişi ve Kayıt: Kullanıcı adı ve şifre ile güvenli giriş ve yeni kullanıcı kayıt işlemleri.
+• Yeni Müşteri Ekleme: Müşteriler, görsel bir arayüz üzerinden oda numaraları seçilerek eklenebilir. Dolu odalar kırmızı, boş odalar ise yeşil renkte gösterilir.
+• Müşteri Yönetimi: Müşterilerin bilgileri güncellenebilir veya silinebilir. Ayrıca, müşteri isimlerine göre arama yapma imkanı sunar.
+• Oda Yönetimi: Odaların dolu-boş durumları görüntülenebilir ve dolu odaların detaylarına erişim sağlanabilir.
+• Admin Yönetimi: Uygulamayı kullanabilecek yöneticilerin listelendiği ayrı bir yönetim formu bulunmaktadır.
 
-+ Back-End  kısmı C# ile , Front-End kısmı da Windows Form ile geliştirildi.
+KURULUM
+Gereksinimler
+• .NET Framework
+• MSSQL Server
+  
+Adımlar
+1.Projeyi bilgisayarınıza klonlayın:
 
-+ Fazla detaya girmeden ama ana ihtiyaçları da sorunsuz bir şekilde karşılayan bir uygulama oldu .
+git clone https://github.com/kullanici/pansiyon-kayit.git
+cd pansiyon-kayit
 
-✓  Kullanıcı adı ve şifre ile giriş - kayıt işlemleri yapılabilir düzeyde  
+2.Projeyi Visual Studio ile açın ve derleyin.
+3.Uygulamayı çalıştırmadan önce, kendi veritabanı bağlantı bilgilerinizi app.config dosyasında yer alan bağlantı dizesine girin. Aksi takdirde, veritabanı işlemleri çalışmayacaktır.
 
-✓  Yeni Müşteri eklenebilir , bu ekleme sırasında oda numaraları görsellerden seçilebilir şekilde tasarlandı . 
-  ✓  Yeni Müşteri Ekleme formunda dolu odalar kırmızı , boş odalar yeşil renkte olacack şekilde ayarlandı.
+Veritabanı Yapısı
+• Uygulamada kullanılan veritabanında iki tablo bulunmaktadır: TBLADMIN ve TBLMUSTERI. Bu tabloları oluşturmak için aşağıdaki SQL komutlarını kullanabilirsiniz.
 
-✓  Müşterilerin bilgilerini güncelleme veya silme işlemlerinin yapılabileceği Müşteriler formu oluşturuldu.
-  ✓  Ayrıca yine bu formda müşterinin ismine göre arama yapıp bilgilerini görebileceğimiz kısım da yapıldı.
-
-✓  Odaların dolu-boş durumlarını görebileceğimiz , ayrı olarak dolu odalaarın bilgilerine erişebileceğimiz Oda ve Oda Detay formları oluşturuldu.
-
-✓  Ekstra olarak uygulamayı kullanabilecek olan yöneticilerin listelendiği Adminler formu da oluşturuldu.
-
---- UYARI ---
-
-( Uygulamayı kendi bilgisayarında çalıştırıp denemek isteyen kişiler , veri tabanı bağlantısı kısmında sıkıntı yaşamamak adına , kendi veir tabanı bilgilerini ilgili kısımlara girmelidir. 
-Aksi durumda veri tabanına kayıt işlemleri çalışmayacak ve uygulama hata verecektir. )
-
-Uygulamada TBLADMIN ve TBLMUSTERI adında 2 tablo oluşturulmuştur . Bu tabloların create kodu aşağıdaki gibidir : 
-
--- TBLMUSTERİ --
-
-CREATE TABLE [dbo].[TBL_TABLOADI](
-	[MUSTERIID] [int] IDENTITY(1,1) NOT NULL,
-	[MUSTERIAD] [varchar](50) NULL,
-	[MUSTERISOYAD] [varchar](50) NULL,
-	[MUSTERITELEFON] [varchar](15) NULL,
-	[MUSTERIMAIL] [varchar](50) NULL,
-	[MUSTERITC] [varchar](12) NULL,
-	[ODANO] [varchar](3) NULL,
-	[GIRISTARIHI] [date] NULL,
-	[CIKISTARIHI] [date] NULL,
-	[UCRET] [varchar](20) NULL,
- 	PRIMARY KEY ([MUSTERIID])
- )
-
--- TBLADMIN --
-
-CREATE TABLE [dbo].[TBL_TABLOADI](
-	[ADMINID] [int] IDENTITY(1,1) NOT NULL,
-	[ADMINKULLANICIAD] [varchar](50) NULL,
-	[ADMINSIFRE] [varchar](20) NULL,
- 	PRIMARY KEY ([ADMINID])
+TBLMUSTERI
+sql
+Kodu kopyala
+CREATE TABLE [dbo].[TBLMUSTERI](
+    [MUSTERIID] [int] IDENTITY(1,1) NOT NULL,
+    [MUSTERIAD] varchar NULL,
+    [MUSTERISOYAD] varchar NULL,
+    [MUSTERITELEFON] varchar NULL,
+    [MUSTERIMAIL] varchar NULL,
+    [MUSTERITC] varchar NULL,
+    [ODANO] varchar NULL,
+    [GIRISTARIHI] [date] NULL,
+    [CIKISTARIHI] [date] NULL,
+    [UCRET] varchar NULL,
+PRIMARY KEY ([MUSTERIID])
 )
+
+TBLADMIN
+sql
+Kodu kopyala
+CREATE TABLE [dbo].[TBLADMIN](
+    [ADMINID] [int] IDENTITY(1,1) NOT NULL,
+    [ADMINKULLANICIAD] varchar NULL,
+    [ADMINSIFRE] varchar NULL,
+PRIMARY KEY ([ADMINID])
+)
+
+UYARILAR
+- Uygulamayı kendi bilgisayarınızda çalıştırmak için veritabanı bağlantı bilgilerini app.config dosyasına kendi bilgilerinizi girerek düzenlemelisiniz. Aksi takdirde, uygulama veri tabanına bağlanamayacak ve hata verecektir.
+- 
+Yazarlar
+Samet ARSLAN - Geliştirici - (https://github.com/sametarslan7)
+
+Lisans
+Bu proje MIT Lisansı ile lisanslanmıştır.
