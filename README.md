@@ -20,13 +20,15 @@ KURULUM
 Gereksinimler
 
 • .NET Framework
+
 • MSSQL Server
   
 Adımlar
 
 1.Projeyi bilgisayarınıza klonlayın:
 
-git clone https://github.com/kullanici/pansiyon-kayit.git
+    git clone https://github.com/kullanici/pansiyon-kayit.git
+
 cd pansiyon-kayit
 
 2.Projeyi Visual Studio ile açın ve derleyin.
@@ -41,7 +43,7 @@ Veritabanı Yapısı
 TBLMUSTERI
 
 
-CREATE TABLE [dbo].[TBLMUSTERI](
+    CREATE TABLE [dbo].[TBLMUSTERI](
 
     [MUSTERIID] [int] IDENTITY(1,1) NOT NULL,
     
@@ -63,14 +65,14 @@ CREATE TABLE [dbo].[TBLMUSTERI](
     
     [UCRET] varchar NULL,
     
-PRIMARY KEY ([MUSTERIID])
+    PRIMARY KEY ([MUSTERIID])
 
-)
+    )
 
 
 TBLADMIN
 
-CREATE TABLE [dbo].[TBLADMIN](
+    CREATE TABLE [dbo].[TBLADMIN](
 
     [ADMINID] [int] IDENTITY(1,1) NOT NULL,
     
@@ -78,9 +80,9 @@ CREATE TABLE [dbo].[TBLADMIN](
     
     [ADMINSIFRE] varchar NULL,
     
-PRIMARY KEY ([ADMINID])
+    PRIMARY KEY ([ADMINID])
 
-)
+    )
 
 
 UYARILAR
