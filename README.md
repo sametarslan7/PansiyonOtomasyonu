@@ -1,4 +1,5 @@
  PANSİYON KAYIT UYGULAMASI
+ 
 Bu proje, basit bir pansiyon-müşteri kayıt uygulaması olup, Back-End kısmı C# ile, Front-End kısmı ise Windows Form ile geliştirilmiştir. Uygulama, pansiyon yönetimini kolaylaştırmak için temel ihtiyaçları karşılayacak şekilde tasarlanmıştır.
 
 ÖZELLİKLER
@@ -38,37 +39,58 @@ Veritabanı Yapısı
 
 
 TBLMUSTERI
-sql
-Kodu kopyala
+
+
 CREATE TABLE [dbo].[TBLMUSTERI](
+
     [MUSTERIID] [int] IDENTITY(1,1) NOT NULL,
+    
     [MUSTERIAD] varchar NULL,
+    
     [MUSTERISOYAD] varchar NULL,
+    
     [MUSTERITELEFON] varchar NULL,
+    
     [MUSTERIMAIL] varchar NULL,
+    
     [MUSTERITC] varchar NULL,
+    
     [ODANO] varchar NULL,
+    
     [GIRISTARIHI] [date] NULL,
+    
     [CIKISTARIHI] [date] NULL,
+    
     [UCRET] varchar NULL,
+    
 PRIMARY KEY ([MUSTERIID])
+
 )
+
 
 TBLADMIN
-sql
-Kodu kopyala
+
 CREATE TABLE [dbo].[TBLADMIN](
+
     [ADMINID] [int] IDENTITY(1,1) NOT NULL,
+    
     [ADMINKULLANICIAD] varchar NULL,
+    
     [ADMINSIFRE] varchar NULL,
+    
 PRIMARY KEY ([ADMINID])
+
 )
 
+
 UYARILAR
+
 - Uygulamayı kendi bilgisayarınızda çalıştırmak için veritabanı bağlantı bilgilerini app.config dosyasına kendi bilgilerinizi girerek düzenlemelisiniz. Aksi takdirde, uygulama veri tabanına bağlanamayacak ve hata verecektir.
-- 
+
 Yazarlar
+
 Samet ARSLAN - Geliştirici - (https://github.com/sametarslan7)
 
 Lisans
+
 Bu proje MIT Lisansı ile lisanslanmıştır.
